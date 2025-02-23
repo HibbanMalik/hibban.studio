@@ -1,59 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Fixed closing tag here -->
 </head>
+
 <body>
     <header>
-        <h1>Hibban Malik</h1>
-   
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#"> Hibban Malik </a>
+            </div>
 
+            <!-- Hamburger Icon -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
 
-    <nav class="Right-buttons">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-</header>
-
-
-    <main>
-        <section id="home">
-            <h2>Welcome to My Portfolio</h2>
-            <p>Explore my projects, background, and more. Feel free to reach out if you'd like to collaborate!</p>
-        </section>
-
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I'm a passionate developer with a keen interest in building innovative solutions. Here's a little more about my background and experiences.</p>
-        </section>
-
-        <section id="projects">
-            <h2>My Projects</h2>
-            <ul>
-                <li>Project 1</li>
-                <li>Project 2</li>
-                <li>Project 3</li>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
             </ul>
-            <button>View All Projects</button>
-        </section>
+        </nav>
 
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>Have any questions? Feel free to reach out via email or social media.</p>
-        </section>
-    </main>
+        <!-- Home Section -->
+        <section id="home" class="home">
 
-    <footer>
-        <p>&copy; 2025 My Portfolio</p>
-        <p><a href="https://github.com/HibbanMalik">Visit my GitHub</a></p>
-    </footer>
+            
+
+            <div class="home-content">
+                <!--  image -->
+                <img src="nav-avatar.png" alt="Hibban Malik" class="profile-image">
+                
+                <h1>Welcome!</h1>
+
+                <div class="container">
+                    <h2>I'm <span class="auto-type"></span></h2> <!-- This is where typing effect will show -->
+                </div>
+
+                <p>Welcome to my personal portfolio. I'm a Computer Science student passionate about coding and web
+                    development.</p>
+           
+            
+
+
+
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <a href="#projects" class="cta-button">Check out my projects</a>
+
+                
+            </div>
+
+            
+        </section>
+        
+        
+
+    </header>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+        // Initialize Typed.js with the correct syntax
+        var typed = new Typed(".auto-type", {
+            strings: ["Hibban", "Programmer", "Designer", "Learner"], // Text to be typed
+            typeSpeed: 150, // Speed of typing
+            backSpeed: 150, // Speed of backspacing
+            backDelay: 1000, // Delay before starting to backspace
+            loop: true // Loop the typing animation
+        });
+    </script>
+
+    <script>
+        // Function to toggle the menu for mobile
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 </body>
+
 </html>
